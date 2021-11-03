@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet" />
+
+    <!-- icons materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- fontswesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- CSS Estilos -->
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <title>Contacto</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="/index.html" class="brand-logo">
+                        <div class="logo"></div>
+                    </a>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/productos.html">Productos</a></li>
+                        <li><a href="/ofertas.html">Ofertas</a></li>
+                        <li><a href="/aboutus.html">¿Quiénes somos?</a></li>
+                        <li class="active"><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- fomulario -->
+    <main>
+        <div class="section container">
+            <div class="row">
+                <div class="col s12">
+                    <form action="#" method="get" onsubmit="return validar();">
+                        <div class="row card-panel">
+                            <h4 class="center-align">Ingresa tus datos</h4>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input type="text" name="nombre" id="nombre" required class="validate" data-length="30">
+                                <label for="nombre">Nombre</label>
+                                <span class="helper-text" data-error="Error, ingresa un nombre adecuado."></span>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input type="text" name="apellido" id="apellido" required class="validate" data-length="30">
+                                <label for="apellido">Apellido</label>
+                                <span class="helper-text" data-error="Error, ingresa un apellido adecuado."></span>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">email</i>
+                                <input type="email" name="email" id="email" required class="validate" data-length="45">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Error, ingresa un email adecuado."></span>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">phone</i>
+                                <input type="tel" name="telf" id="telf" required class="validate" data-length="9" placeholder="Ejemplo 948119533">
+                                <label for="telf">Telefono</label>
+                                <span class="helper-text" data-error="Error, ingresa un telefono adecuado."></span>
+                            </div>
+                            <h4 class="center-align">¿Cómo quieres tu torta?</h4>
+                            <div class="input-field col s6">
+                              <select name="tam" id="tam">
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="peque">Pequeña</option>
+                                <option value="mediana">Mediana</option>
+                                <option value="grande">Grande</option>
+                                <option value="extra">Extra grande</option>
+                            </select>
+                            <label>Tamaño del bizcocho</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <select name="sabores" id="sabores">
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="vainilla">Vainilla</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="twin">Twin</option>
+                              </select>
+                            <label>Sabor del bizcocho</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker" name="fecha" placeholder="Seleccione fecha de entrega" required>
+                                <span class="helper-text" data-error="Error, ingresa una fecha adecuada."></span>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="comentario" class="materialize-textarea" data-length="120"></textarea>
+                                <label for="comentario">Comentarios</label>
+                            </div>
+                            <div class="input-field col s12 center-align">
+                              <button class="btn waves-effect waves-light" type="submit">Enviar
+                                <i class="material-icons right">send</i>
+                              </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col m12 s12 center-align">
+                    <h5 class="white-text">Social Media</h5>
+                    <div class="collection">
+                        <a href="#!" class="collection-item"><i class="fab fa-facebook"></i></a>
+                        <a href="#!" class="collection-item"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/tiayuriscake/?hl=es" target="blank" class="collection-item"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                <p>
+                    &copy; <b>Made by Jonayker Rozo</b> with
+                    <a class="grey-text text-lighten-4" href="https://materializecss.com/"
+                        target="blank">Materialize</a>- Todos
+                    los Derechos Reservados
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!-- JS Main -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
